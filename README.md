@@ -2,3 +2,6 @@ Here I am building a app for you to upload events like birthdays and holidays in
 I would like to add some new stuff to this app soon.
 Add a notification option to recive email of text when events are close.
 Be able to create a check list for every event.
+
+
+*** Trying to push updated file to GH and getting errors. Working on that now.
