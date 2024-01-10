@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>🎁 Never For Gift Me 🎁</title>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
   <body>
+    <!-- used Bootstrap in my header -->
     <div class="jumbotron text-center">
         <h1 class="display-4">🎁 Never For Gift Me 🎁</h1>
         <p class="lead">Never stress about forgeting gifts agin.<br>Just put the event in your calander.<br>Look to see whos got something coming up and go pick out there gift!</p>
     </div>
+    <!-- created a div to hold month of the year -->
     <div id="container">
       <div id="header">
         <div id="monthDisplay"></div>
+        <!-- created another div to contain my button to switch month -->
         <div>
           <button id="backButton">Back</button>
           <button id="nextButton">Next</button>
         </div>
       </div>
-
+      <!-- created another div to put weekdayd in -->
       <div id="weekdays">
         <div>Sunday</div>
         <div>Monday</div>
@@ -30,19 +34,19 @@
         <div>Friday</div>
         <div>Saturday</div>
       </div>
-
+      <!-- created div used id for calendar -->
       <div id="calendar"></div>
     </div>
-
+    <!-- created a div to input a event to add to calenddar -->
     <div id="newEventModal">
       <h2>New Event</h2>
-
+        <!-- created a input to hold a place to put event in -->
       <input id="eventTitleInput" placeholder="Event Title" />
-
+        <!-- created buttons for save and cancel -->
       <button id="saveButton">Save</button>
       <button id="cancelButton">Cancel</button>
     </div>
-
+    <!-- created another div to delete events on calendar -->
     <div id="deleteEventModal">
       <h2>Event</h2>
 
@@ -51,7 +55,7 @@
       <button id="deleteButton">Delete</button>
       <button id="closeButton">Close</button>
     </div>
-
+    <!-- created a card using bootstrap for the bottom of the page to nest the links in -->
     <div id="modalBackDrop"></div>
     <div class="container mt-4">
         <div class="card">
@@ -70,12 +74,13 @@
         </div>
     </div>
    
-    
+    <!-- bootstrap on footer just because I like it. -->
     <footer class="footer mt-4 py-3 bg-dark text-white texted-center">
         <div class="container">
             <span class="text-muted">&copy; 2024 Jessica Sharp</span>
         </div>
-    </footer> 
+    </footer>
+     <!--placed script down here might change this placement down the road  -->
     <script src="../JS/script.js"></script>
   </body>
 </html>
