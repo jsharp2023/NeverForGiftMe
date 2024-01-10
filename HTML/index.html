@@ -7,57 +7,75 @@
     <title>🎁 Never For Gift Me 🎁</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body>
-    <script src="../JS/script.js"></script>
-    
-        <div class="jumbotron text-center">
-            <h1 class="display-4">🎁 Never For Gift Me 🎁</h1>
-            <p class="lead">Never stress about forgeting gifts agin.</p>
-        </div>
-
-        <!--Calander-->
+  <body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">🎁 Never For Gift Me 🎁</h1>
+        <p class="lead">Never stress about forgeting gifts agin.<br>Just put the event in your calander.<br>Look to see whos got something coming up and go pick out there gift!</p>
+    </div>
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
         <div>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=0&showTitle=0&showTz=0&showTabs=1&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5&color=%230B8043" style="border-width:0" width="600" height="300"></iframe>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
 
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
 
-        <!-- form-->
-        <form>
-            <div class="row g-3">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            </div>
-          </div>
-        </form>
-            </div>
-        <!--Button-->
-        <button class="submit">Submit</button>
+      <div id="calendar"></div>
+    </div>
 
-        <!-- Card section -->
-        <div class="container mt-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Pick your Store</h5>
-                    <p class="card-text">Pick the store you want to get the gift from. </p>
-                    
-                    <a href="https://www.amazon.com/?tag=hymsabk-20&ref=pd_sl_290dlthsvm_e&adgrpid=1341404752168026&hvadid=83838035949211&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=81581&hvtargid=kwd-83838147155260:loc-190&hydadcr=28884_14559613" class="bt1">Amazon</a>
-                    
-                    <a href="https://www.walmart.com/?adid=22222222224226138098&wmlspartner=wmtlabs&wl0=e&wl1=o&wl2=c&wl3=74629512777785&wl4=kwd-64003623973:loc-190&wl5=81581&wl6=&wl7=&wl14=Walmart&veh=sem&&msclkid=2361ef07babf1102becd8a9adf0cd72d&gclid=2361ef07babf1102becd8a9adf0cd72d&gclsrc=3p.ds" class="bt2">Walmart</a>
-                    
-                    <a href="https://us.shein.com/?url_from=usbingbrandshein_shein28_srsa_20210207&msclkid=3e3020640b361935a6d845f96eeb85d4" class="bt3">Shein</a>
-                    
-                    <a href="https://www.temu.com/?_bg_fs=1&_p_jump_id=10&_x_vst_scene=adg&_p_rfs=1&_x_ads_sub_channel=search&_x_ads_account=176148513&_x_ads_channel=bing&_x_ads_set=518429138&_x_ads_id=1323813638137242&_x_ads_creative_id=82738614636630&_x_ns_source=o&_x_ns_msclkid=5d4f0ef745041ecacd696b6a230c7ea2&_x_ns_match_type=p&_x_ns_bid_match_type=bp&_x_ns_query=Temu%20marketplace&_x_ns_keyword=Temu&_x_ns_device=c&_x_ns_targetid=kwd-82739251713589%3Aloc-190&_x_ns_extensionid=&_x_ns_product_id=&msclkid=5d4f0ef745041ecacd696b6a230c7ea2" class="bt4">Temu</a>
-                </div>
+    <div id="newEventModal">
+      <h2>New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Pick your Store</h5>
+                <p class="card-text">Pick the store you want to get the gift from. </p>
+                
+                <a href="https://www.amazon.com/?tag=hymsabk-20&ref=pd_sl_290dlthsvm_e&adgrpid=1341404752168026&hvadid=83838035949211&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=81581&hvtargid=kwd-83838147155260:loc-190&hydadcr=28884_14559613" class="bt1">Amazon</a>
+                
+                <a href="https://www.walmart.com/?adid=22222222224226138098&wmlspartner=wmtlabs&wl0=e&wl1=o&wl2=c&wl3=74629512777785&wl4=kwd-64003623973:loc-190&wl5=81581&wl6=&wl7=&wl14=Walmart&veh=sem&&msclkid=2361ef07babf1102becd8a9adf0cd72d&gclid=2361ef07babf1102becd8a9adf0cd72d&gclsrc=3p.ds" class="bt2">Walmart</a>
+                
+                <a href="https://us.shein.com/?url_from=usbingbrandshein_shein28_srsa_20210207&msclkid=3e3020640b361935a6d845f96eeb85d4" class="bt3">Shein</a>
+                
+                <a href="https://www.temu.com/?_bg_fs=1&_p_jump_id=10&_x_vst_scene=adg&_p_rfs=1&_x_ads_sub_channel=search&_x_ads_account=176148513&_x_ads_channel=bing&_x_ads_set=518429138&_x_ads_id=1323813638137242&_x_ads_creative_id=82738614636630&_x_ns_source=o&_x_ns_msclkid=5d4f0ef745041ecacd696b6a230c7ea2&_x_ns_match_type=p&_x_ns_bid_match_type=bp&_x_ns_query=Temu%20marketplace&_x_ns_keyword=Temu&_x_ns_device=c&_x_ns_targetid=kwd-82739251713589%3Aloc-190&_x_ns_extensionid=&_x_ns_product_id=&msclkid=5d4f0ef745041ecacd696b6a230c7ea2" class="bt4">Temu</a>
             </div>
         </div>
+    </div>
+   
     
-    
-        <footer class="footer mt-4 py-3 bg-dark text-white texted-center">
-            <div class="container">
-                <span class="text-muted">&copy; 2024 Jessica Sharp</span>
-            </div>
-        </footer>    
-</body>
+    <footer class="footer mt-4 py-3 bg-dark text-white texted-center">
+        <div class="container">
+            <span class="text-muted">&copy; 2024 Jessica Sharp</span>
+        </div>
+    </footer> 
+    <script src="../JS/script.js"></script>
+  </body>
 </html>
