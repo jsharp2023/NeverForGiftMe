@@ -1,48 +1,45 @@
+
 *,*::before,*::after{
     box-sizing: border-box;
     margin: 0px;
     font-family: fantasy;
 }
-
-.backgroundvideo{
-    position: absolute;
-    right:0;
-    left:0;
-    z-index:-1;
-}
-@media (min-aspect-ratio:16/9){
-    .backgroundvideo{
-        width:auto;
-        height:auto;
-    }
-}
-
+/* the top of page  */
   h1{
     color:#000000;
     text-decoration: underline;
     padding:30px;
     margin:auto;
     text-align: center;
+    text-shadow: 0px 0px 5px rgb(248, 246, 246);
+    background-color: #a307e1;
+    border-radius: 10%;
     
 }
-
+/* the top of the shop card */
  h5{
     text-align: center;
-    box-shadow: 0px 0px 10px #ffb800;
+    
 }
-
+/* pick your store area at top of pop up */
 .card-title{
-    background-color: #ef06e3;
+    background-color:#a307e1;
     padding:20px;
+    text-shadow: 0px 1px 5px white;
 
 }
-
+/* this is for the pink area at the top */
 p{
     text-align: center;
     padding: 10px;
-    background-color: #a307e1;
+    box-shadow:0px 4px 8px #0b0c0c;
+    color:white;
+    text-shadow: 5px 3px 5px #000000;
+    background-color: #ef06e3;
+    border-radius: 50%;
+    
 }
-
+/* this is the buttons for the external links */
 .bt1, .bt2, .bt3, .bt4{
     text-align: center;
     box-shadow: 0px 0px 15px #a307e1;
@@ -54,19 +51,11 @@ p{
     column-gap: 10%;
 }
 
-.card-body{
-    background-color: #92a1d1;
-}
-
-
-body {
-    background-color:#a307e1;
-  }
-
+/* the button on the card that pops up */
   button {
     width: 75px;
     cursor: pointer;
-    box-shadow: 0px 0px 2px gray;
+    box-shadow: 0px 0px 2px rgb(12, 12, 12);
     border: none;
     outline: none;
     padding: 5px;
@@ -80,17 +69,22 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    text-shadow: 0px 0px 5px white;
   }
 
   #header button {
-    background-color:#061b61;
+    background-color:#f703f7;
+    border-radius:20%;
+    text-shadow: 0px 0px 5px rgb(12, 12, 12);
+    box-shadow: 0px 0px 5px #000000;
     
   }
-
+/* This is where to the calander pop in */
   #container {
-    width: 790px;
-    background-color: #a307e1;
-    shape-margin: ;
+    background-color:#a307e1;
+    border-radius: 5%;
+    width:800px;
+    box-shadow: 4px 5px 6px rgb(12, 12, 12);
   }
 
 
@@ -99,6 +93,7 @@ body {
     width: 100%;
     display: flex;
     color: black;
+    text-shadow:0px 0px 6px white;
   }
 
   #weekdays div {
@@ -114,16 +109,17 @@ body {
   }
 
   .day {
-    width: 100px;
-    padding: 10px;
-    height: 100px;
+    width: 99px;
+    padding: 8px;
+    height: 89px;
     cursor: pointer;
     background-color: rgb(249, 224, 180);
-    margin: 5px;
+    margin: 6px;
     box-shadow: 0px 0px 3px #0a1201;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 5%;
   }
 
   .day:hover {
@@ -150,12 +146,16 @@ body {
     box-shadow: none !important;
   }
 
+  #shopButton{
+    background-color: beige;
+  }
+/* container for the new event bg */
   #newEventModal, #deleteEventModal {
-    display: none;
+    display:none;
     z-index: 20;
     padding: 25px;
-    background-color: #e8f4fa;
-    box-shadow: 0px 0px 3px black;
+    background-color: #6607fe;
+    box-shadow: 0px 0px 5px black;
     border-radius: 5px;
     width: 350px;
     top: 100px;
@@ -163,7 +163,7 @@ body {
     position: absolute;
     font-family: sans-serif;
   }
-
+/* this is the area where you type in you event to be saved */
   #eventTitleInput {
     padding: 10px;
     width: 100%;
@@ -172,7 +172,7 @@ body {
     border-radius: 3px;
     outline: none;
     border: none;
-    box-shadow: 0px 0px 3px gray;
+    box-shadow: 0px 3px 3px rgb(5, 5, 5);
   }
 
   #eventTitleInput.error {
@@ -180,11 +180,11 @@ body {
   }
 
   #cancelButton, #deleteButton {
-    background-color: #d36c6c;
+    background-color: #f90404;
   }
 
   #saveButton, #closeButton {
-    background-color: #92a1d1;
+    background-color: #05f715;
   }
 
 .btn{
@@ -193,9 +193,10 @@ body {
     background-color: #000000;
 }
 
-
+/* the pop up for events you post in calendar */
   #eventText {
     font-size: 14px;
+    color:#f1f1ec
   }
 
   #modalBackDrop {
@@ -209,14 +210,15 @@ body {
     background-color: rgba(0,0,0,0.8);
   }
 
-
+/* the month and year area */
   #monthDisplay{
-    color:black;
+    color:rgb(8, 8, 8);
+    
   }
-
+/* pick your store area */
   .popup{
     width:400px;
-    background:rgb(253, 229, 229);
+    background:rgb(249, 247, 247);
     border-radius:6px;
     position: absolute;
     margin:25px;
@@ -243,17 +245,4 @@ body {
 
   body, html {
     height: 100%;
-  }
-  
-  .bg {
-    /* The image used */
-    background-image: url("../HTML/pictures/fireworks.jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
