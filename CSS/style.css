@@ -1,33 +1,57 @@
 *,*::before,*::after{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0px;
     font-family: fantasy;
 }
 
- h1{
+.backgroundvideo{
+    position: absolute;
+    right:0;
+    left:0;
+    z-index:-1;
+}
+@media (min-aspect-ratio:16/9){
+    .backgroundvideo{
+        width:auto;
+        height:auto;
+    }
+}
+
+  h1{
     color:#000000;
     text-decoration: underline;
     padding:30px;
     margin:auto;
     text-align: center;
-    box-shadow: 0px 0px 40px #f1d180
+    
 }
 
-h5{
+ h5{
     text-align: center;
     box-shadow: 0px 0px 10px #ffb800;
+}
+
+.card-title{
+    background-color: #ef06e3;
+    padding:20px;
+
 }
 
 p{
     text-align: center;
     padding: 10px;
+    background-color: #a307e1;
 }
 
 .bt1, .bt2, .bt3, .bt4{
-    padding:20px;
-    box-shadow: 0px 0px 15px #ffb800;
     text-align: center;
-    margin-inline: 80px;
+    box-shadow: 0px 0px 15px #a307e1;
+    background-color: rgb(255, 192, 203);
+    border-radius: 10px; 
+    letter-spacing: 1px;
+    padding:15px;
+    margin-top: 20px;
+    column-gap: 10%;
 }
 
 .card-body{
@@ -36,10 +60,7 @@ p{
 
 
 body {
-    display: block;
-    margin-top: 50px;
-    justify-content: center;
-    background-color: #FFFCFF;
+    background-color:#a307e1;
   }
 
   button {
@@ -55,24 +76,29 @@ body {
   
   #header {
     padding: 10px;
-    color: #e80808;
     font-size: 26px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
   }
 
   #header button {
-    background-color:#073ce9;
+    background-color:#061b61;
+    
   }
 
   #container {
-    width: 770px;
+    width: 790px;
+    background-color: #a307e1;
+    shape-margin: ;
   }
+
+
 
   #weekdays {
     width: 100%;
     display: flex;
-    color: #055f86;
+    color: black;
   }
 
   #weekdays div {
@@ -81,7 +107,7 @@ body {
   }
 
   #calendar {
-    width: 100%;
+     width: 100%; 
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -101,18 +127,18 @@ body {
   }
 
   .day:hover {
-    background-color: #e8faed;
+    background-color: pink;
   }
   
   .day + #currentDay {
-    background-color:#e8f4fa;
+    background-color:#ef06e3;
   }
 
   .event {
     font-size: 10px;
     padding: 3px;
-    background-color: #58bae4;
-    color: white;
+    background-color: #6004f4ae;
+    color: black;
     border-radius: 5px;
     max-height: 55px;
     overflow: hidden;
@@ -120,7 +146,7 @@ body {
 
   .padding {
     cursor: default !important;
-    background-color: #FFFCFF !important;
+    background-color: #f703f7 !important;
     box-shadow: none !important;
   }
 
@@ -161,6 +187,13 @@ body {
     background-color: #92a1d1;
   }
 
+.btn{
+    text-align: center;
+    color:white;
+    background-color: #000000;
+}
+
+
   #eventText {
     font-size: 14px;
   }
@@ -176,6 +209,51 @@ body {
     background-color: rgba(0,0,0,0.8);
   }
 
-  footer{
-    background-color: #055f86;
+
+  #monthDisplay{
+    color:black;
+  }
+
+  .popup{
+    width:400px;
+    background:rgb(253, 229, 229);
+    border-radius:6px;
+    position: absolute;
+    margin:25px;
+    top:90%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#0b0c0c;
+    visibility: hidden;
+    transition: tranform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+}
+
+  .popup a{
+    text-align: center;
+    font-size:25px;
+    font-weight: 300;
+    
+  }
+
+  body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("../HTML/pictures/fireworks.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
