@@ -5,3 +5,5 @@ Be able to create a check list for every event.
 
 
 *** Trying to push updated file to GH and getting errors. Working on that now.
+fixed issue
+styling the project having trouble with background
