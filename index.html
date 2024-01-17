@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>🎁 Never For Gift Me 🎁</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+  <body>
+  
+        <h1>🎁 Never For Gift Me 🎁</h1>
+        <p>Never stress about forgeting gifts agin.<br>Just put the event in your calander.<br>Look to see whos got something coming up and go pick out there gift!</p>
+    
+    <!-- created a div to hold month of the year -->
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <!-- created another div to contain my button to switch month -->
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+      <!-- created another div to put weekdayd in -->
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
+      <!-- created div used id for calendar -->
+      <div id="calendar"></div>
+    </div>
+    <!-- created a div to input a event to add to calenddar -->
+    <div id="newEventModal">
+      <h2>New Event</h2>
+        <!-- created a input to hold a place to put event in -->
+      <input id="eventTitleInput" placeholder="Event Title" />
+        <!-- created buttons for save and cancel -->
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+      
+        
+      </div>
+      
+    </div>
+    <!-- created another div to delete events on calendar -->
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+      <button id="shopButton" class="btn" onclick="openPopup()">Shop</button>
+      <div class="popup" id="popup">
+        <h5 class="card-title">Pick your Store</h5>
+                <p class="card-text">Pick the store you want to get the gift from. </p>
+                <div type="buttons" onclick="closePopup()">
+                    
+                    <div class="bt1">
+                    <a href="https://www.amazon.com/?tag=hymsabk-20&ref=pd_sl_290dlthsvm_e&adgrpid=1341404752168026&hvadid=83838035949211&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=81581&hvtargid=kwd-83838147155260:loc-190&hydadcr=28884_14559613">Amazon</a></div>
+                
+                    <div  class="bt2">
+                    <a href="https://www.walmart.com/?adid=22222222224226138098&wmlspartner=wmtlabs&wl0=e&wl1=o&wl2=c&wl3=74629512777785&wl4=kwd-64003623973:loc-190&wl5=81581&wl6=&wl7=&wl14=Walmart&veh=sem&&msclkid=2361ef07babf1102becd8a9adf0cd72d&gclid=2361ef07babf1102becd8a9adf0cd72d&gclsrc=3p.ds">Walmart</a></div>
+                    
+                    <div  class="bt3">
+                    <a href="https://us.shein.com/?url_from=usbingbrandshein_shein28_srsa_20210207&msclkid=3e3020640b361935a6d845f96eeb85d4">Shein</a></div>
+                    
+                    <div class="bt4">
+                    <a href="https://www.temu.com/?_bg_fs=1&_p_jump_id=10&_x_vst_scene=adg&_p_rfs=1&_x_ads_sub_channel=search&_x_ads_account=176148513&_x_ads_channel=bing&_x_ads_set=518429138&_x_ads_id=1323813638137242&_x_ads_creative_id=82738614636630&_x_ns_source=o&_x_ns_msclkid=5d4f0ef745041ecacd696b6a230c7ea2&_x_ns_match_type=p&_x_ns_bid_match_type=bp&_x_ns_query=Temu%20marketplace&_x_ns_keyword=Temu&_x_ns_device=c&_x_ns_targetid=kwd-82739251713589%3Aloc-190&_x_ns_extensionid=&_x_ns_product_id=&msclkid=5d4f0ef745041ecacd696b6a230c7ea2">Temu</a></div>
+    </div>
+    
+    <!-- bootstrap on footer just because I like it. -->
+    <!-- <footer class="footer mt-4 py-3 bg-black text-white texted-center"> -->
+        <footer>
+        <div class="container">
+            <span class="text-muted">&copy; 2024 Jessica Sharp</span>
+        </div>
+    </footer>
+     <!--placed script down here might change this placement down the road  -->
+    <script src="../JS/script.js"></script>
+  </body>
+</html>
