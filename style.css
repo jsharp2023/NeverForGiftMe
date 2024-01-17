@@ -1,0 +1,247 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: fantasy;
+}
+/* the top of page  */
+  h1{
+    color:#000000;
+    text-decoration: underline;
+    padding:30px;
+    margin:auto;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgb(248, 246, 246);
+    background-color: #a307e1;
+    border-radius: 10%;
+    
+}
+/* the top of the shop card */
+ h5{
+    text-align: center;
+    
+}
+/* pick your store area at top of pop up */
+.card-title{
+    background-color:#a307e1;
+    padding:20px;
+    text-shadow: 0px 1px 5px white;
+
+}
+/* this is for the pink area at the top */
+p{
+    text-align: center;
+    padding: 10px;
+    box-shadow:0px 4px 8px #0b0c0c;
+    color:white;
+    text-shadow: 5px 3px 5px #000000;
+    background-color: #ef06e3;
+    border-radius: 50%;
+    
+}
+/* this is the buttons for the external links */
+.bt1, .bt2, .bt3, .bt4{
+    text-align: center;
+    box-shadow: 0px 0px 15px #a307e1;
+    background-color: rgb(255, 192, 203);
+    border-radius: 10px; 
+    letter-spacing: 1px;
+    padding:15px;
+    margin-top: 20px;
+    column-gap: 10%;
+}
+
+/* the button on the card that pops up */
+  button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgb(12, 12, 12);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #header {
+    padding: 10px;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-shadow: 0px 0px 5px white;
+  }
+
+  #header button {
+    background-color:#f703f7;
+    border-radius:20%;
+    text-shadow: 0px 0px 5px rgb(12, 12, 12);
+    box-shadow: 0px 0px 5px #000000;
+    
+  }
+/* This is where to the calander pop in */
+  #container {
+    background-color:#a307e1;
+    border-radius: 5%;
+    width:800px;
+    box-shadow: 4px 5px 6px rgb(12, 12, 12);
+  }
+
+
+
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: black;
+    text-shadow:0px 0px 6px white;
+  }
+
+  #weekdays div {
+    width: 150px;
+    padding: 10px;
+  }
+
+  #calendar {
+     width: 100%; 
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .day {
+    width: 99px;
+    padding: 8px;
+    height: 89px;
+    cursor: pointer;
+    background-color: rgb(249, 224, 180);
+    margin: 6px;
+    box-shadow: 0px 0px 3px #0a1201;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5%;
+  }
+
+  .day:hover {
+    background-color: pink;
+  }
+  
+  .day + #currentDay {
+    background-color:#ef06e3;
+  }
+
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #6004f4ae;
+    color: black;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+
+  .padding {
+    cursor: default !important;
+    background-color: #f703f7 !important;
+    box-shadow: none !important;
+  }
+
+  #shopButton{
+    background-color: beige;
+  }
+/* container for the new event bg */
+  #newEventModal, #deleteEventModal {
+    display:none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #6607fe;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+/* this is the area where you type in you event to be saved */
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 3px 3px rgb(5, 5, 5);
+  }
+
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+
+  #cancelButton, #deleteButton {
+    background-color: #f90404;
+  }
+
+  #saveButton, #closeButton {
+    background-color: #05f715;
+  }
+
+.btn{
+    text-align: center;
+    color:white;
+    background-color: #000000;
+}
+
+/* the pop up for events you post in calendar */
+  #eventText {
+    font-size: 14px;
+    color:#f1f1ec
+  }
+
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+/* the month and year area */
+  #monthDisplay{
+    color:rgb(8, 8, 8);
+    
+  }
+/* pick your store area */
+  .popup{
+    width:400px;
+    background:rgb(249, 247, 247);
+    border-radius:6px;
+    position: absolute;
+    margin:25px;
+    top:90%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#0b0c0c;
+    visibility: hidden;
+    transition: tranform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+}
+
+  .popup a{
+    text-align: center;
+    font-size:25px;
+    font-weight: 300;
+    
+  }
+
+  body, html {
+    height: 100%;
+  }
