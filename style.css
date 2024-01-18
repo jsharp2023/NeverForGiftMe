@@ -3,7 +3,15 @@
     margin: 0px;
     font-family: fantasy;
 }
-/* the top of page  */
+/* to center everything on page */
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+/* the top of page the header Neverfor gift me  */
   h1{
     color:#000000;
     text-decoration: underline;
@@ -12,9 +20,10 @@
     text-align: center;
     text-shadow: 0px 0px 5px rgb(248, 246, 246);
     background-color: #a307e1;
-    border-radius: 10%;
+    border-radius: 25px;
     
 }
+
 /* the top of the shop card */
  h5{
     text-align: center;
@@ -32,10 +41,11 @@ p{
     text-align: center;
     padding: 10px;
     box-shadow:0px 4px 8px #0b0c0c;
+    letter-spacing: .3px;
     color:white;
     text-shadow: 5px 3px 5px #000000;
     background-color: #ef06e3;
-    border-radius: 50%;
+    border-radius: 85px;
     
 }
 /* this is the buttons for the external links */
@@ -242,8 +252,4 @@ p{
     font-size:25px;
     font-weight: 300;
     
-  }
-
-  body, html {
-    height: 100%;
   }
