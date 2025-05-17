@@ -10,6 +10,7 @@ body{
   align-items: center;
   align-content: center;
   justify-content: center;
+  padding-bottom: 60px; /* Adjust if your footer is taller */
 }
 /* the top of page the header Neverfor gift me  */
   h1{
@@ -88,7 +89,7 @@ p{
     box-shadow: 0px 0px 5px #000000;
     
   }
-/* This is where to the calander pop in */
+/* This is where to the calendar pop in */
   #container {
     background-color:#a307e1;
     border-radius: 5%;
@@ -240,7 +241,7 @@ p{
     padding: 0 30px 30px;
     color:#0b0c0c;
     visibility: hidden;
-    transition: tranform 0.4s, top 0.4s;
+    transition: transform 0.4s, top 0.4s;
 }
 
 .open-popup{
@@ -253,3 +254,22 @@ p{
     font-weight: 300;
     
   }
+
+footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #a307e1;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+/* Optional: style the text inside the footer */
+footer .text-muted {
+    color: #0d0d0d !important;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
